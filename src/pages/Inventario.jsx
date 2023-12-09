@@ -6,8 +6,11 @@ import Swal from "sweetalert2";
 import useFetch from "../hooks/useFetch";
 import deleteData from "../hooks/DeleteButton";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Inventario() {
+
+    const navigate = useNavigate();
   
     const [productos, setProductos] = useState([]);
 
@@ -125,8 +128,8 @@ export default function Inventario() {
                     section="Módulo de Inventario"
                     addBtn="Agregar producto"
                 />
-                <main className="h-screen mt-3 grid grid-cols-1 md:flex md:flex-wrap md:justify-center  -mb-28">
-                    <div className="relative overflow-x-auto mt-20">
+                <main className="h-screen mt-3 grid grid-cols-1 md:flex md:flex-wrap md:justify-center">
+                    <div className="relative overflow-x-auto mt-20 mb-14">
                         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
@@ -207,7 +210,9 @@ export default function Inventario() {
                                     <button
                                                 className="rounded-md font-bold border hover:bg-yellow-700 border-yellow-700 bg-yellow-500 text-white py-1 px-3 mr-2"
                                                 onClick={() => {
-                                                    window.location.href = `/producto/${producto.id}`;
+                                                    navigate(
+                                                        `/producto/${producto.id}`
+                                                    );
                                                 }
                                                 }
                                                     

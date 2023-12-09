@@ -138,7 +138,14 @@ useEffect(() => {
                 cantidad_minima: cantidadMinimaSent,
             });
             onClose();
-            window.location.reload();
+            
+            Swal.fire({
+                icon: "success",
+                title: "Producto creado",
+                showConfirmButton: false,
+                timer: 1500,
+            });
+
         } catch (error) {
             console.error("Error:", error);
 
