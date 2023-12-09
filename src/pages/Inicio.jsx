@@ -59,9 +59,9 @@ export default function Inicio() {
                 <h1 className='text-white font-medium text-3xl text-center mt-3'>Sushi Bar | Página Administrativa</h1>
                 
                 <main className='mt-10 flex flex-col md:flex-row md:flex-wrap md:justify-center gap-4'>
-                    <CardHome name="Platillos" comidas={"public/sushiii.jpg"} description="Platillos" conxt={totalPlatillos} index={1} ruta="/platillos"/>
-                    <CardHome name="Órdenes" comidas={"public/rest.png"} description="Órdenes" conxt={totalOrdenes} index={2} ruta="/ordenes"/>
-                    <CardHome name="Inventario" comidas={"public/camaron.jpg"} description="Productos" conxt={totalProductos} index={3} ruta="/inventario"/>
+                    <CardHome name="Platillos" comidas={"/sushiii.jpg"} description="Platillos" conxt={totalPlatillos} index={1} ruta="/platillos"/>
+                    <CardHome name="Órdenes" comidas={"/rest.png"} description="Órdenes" conxt={totalOrdenes} index={2} ruta="/ordenes"/>
+                    <CardHome name="Inventario" comidas={"/camaron.jpg"} description="Productos" conxt={totalProductos} index={3} ruta="/inventario"/>
                 </main>
 
             </div>
