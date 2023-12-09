@@ -95,7 +95,9 @@ export default function Clientes() {
                                             <button
                                                 className="rounded-md font-bold border hover:bg-yellow-700 border-yellow-700 bg-yellow-500 text-white py-1 px-3 mr-2"
                                                 onClick={() => {
-                                                    window.location.href = `/cliente/${cliente.id}`;
+                                                    navigate(
+                                                        `/cliente/${cliente.id}`
+                                                    );
                                                 }
                                                 }
                                             >

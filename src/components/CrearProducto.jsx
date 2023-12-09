@@ -1,5 +1,5 @@
 import React from 'react';
-import CrearProductoForm from './CrearProductoForm.jsx';
+import CrearProductoForm from './CrearProductoForm';
 
 const ModalInv = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
