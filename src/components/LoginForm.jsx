@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const endpoint = "http://localhost:8000/api/users";
 const currentUserEndpoint = "http://localhost:8000/api/user";
 
 function LoginForm() {
+
+    const navigate = useNavigate();
 
     const email = "admin@gmail.com"
     const password = "root12345"
@@ -55,10 +58,7 @@ function LoginForm() {
       try {
   
         if (formData.email === email && formData.password === password) {
-          const response = await axios.get(currentUserEndpoint);
-          const user = response.data.data;
-          localStorage.setItem("user", JSON.stringify(user));
-          window.location.href = "/inicio";
+            navigate("/inicio");
         } else {
             Swal.fire({
                 icon: "error",

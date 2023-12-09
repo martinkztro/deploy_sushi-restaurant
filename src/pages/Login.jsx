@@ -3,9 +3,6 @@ import LoginForm from "../components/LoginForm";
 
 export default function Login() {
 
-    
-
-
     return (
         <div>
             <div className="loginwrapper ">
@@ -13,7 +10,7 @@ export default function Login() {
                     <div className="left-columns lg:w-1/2 lg:flex hidden">
                         <div className="logo-box-3">
                             <a href="index.html" className="w-full">
-                                <img src="/Example.jpg" className='invert-0' alt=""/>
+                                <img src="public/Example.jpg" className='invert-0' alt=""/>
                             </a>
                         </div>
                     </div>
