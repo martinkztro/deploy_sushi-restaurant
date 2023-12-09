@@ -1,14 +1,14 @@
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from '/pages/Login';
-import Platillos from '/pages/Platillos';
-import Ordenes from '/pages/Ordenes';
-import Inventario from '/pages/Inventario';
-import Clientes from '/pages/Clientes';
-import Inicio from '/pages/Inicio';
-import EditarCliente from '/components/EditarCliente';
-import EditarProducto from '/components/EditarProducto';
-import EditarPlatillo from '/components/EditarPlatillo';
-import EditarOrden from '/components/EditarOrden';
+import Login from './pages/Login';
+import Platillos from './pages/Platillos';
+import Ordenes from './pages/Ordenes';
+import Inventario from './pages/Inventario';
+import Clientes from './pages/Clientes';
+import Inicio from './pages/Inicio';
+import EditarCliente from './components/EditarCliente';
+import EditarProducto from './components/EditarProducto';
+import EditarPlatillo from './components/EditarPlatillo';
+import EditarOrden from './components/EditarOrden';
 
 
 export default function App() {
