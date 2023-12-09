@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
+import { useNavigate } from "react-router-dom";
 
 const endpoint = "https://restaurante-api-production.up.railway.app/api/clientes";
 
 const CrearClienteForm = ({ onSubmit, onClose }) => {
+
+    const navigate = useNavigate();
 
     // States
     const [name, setName] = useState("");
@@ -76,7 +79,9 @@ const CrearClienteForm = ({ onSubmit, onClose }) => {
     try{
         await axios.post(endpoint, { nombre: name, telefono: phone, email: email });
         onClose();
-        window.location.reload();
+        
+        navigate('/clientes', { replace: true });
+
     } catch (error) {
         console.error("Error:", error);
 
