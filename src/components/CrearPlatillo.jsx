@@ -129,7 +129,7 @@ const ModalPlatillo = ({ isOpen, onClose }) => {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/inventarios").then((response) => {
+        axios.get("https://restaurante-api-production.up.railway.app/api/inventarios").then((response) => {
             setListaDeIngredientes(response.data.data);
         });
     }, []);
@@ -145,7 +145,7 @@ const ModalPlatillo = ({ isOpen, onClose }) => {
     
         try {
             // Primera solicitud para crear el platillo
-            const response1 = await axios.post("http://localhost:8000/api/platillos", formData);
+            const response1 = await axios.post("https://restaurante-api-production.up.railway.app/api/platillos", formData);
     
             // Obtener el ID del platillo recién creado
             const idPlatillo = response1.data.id;
@@ -154,7 +154,7 @@ const ModalPlatillo = ({ isOpen, onClose }) => {
             const formData2 = new FormData();
             formData2.append("ingredientes", JSON.stringify(ingredientesSeleccionados));
     
-            await axios.post(`http://localhost:8000/api/platillosInventarios/${idPlatillo}`, formData2);
+            await axios.post(`https://restaurante-api-production.up.railway.app/api/platillosInventarios/${idPlatillo}`, formData2);
     
             // Cerrar el modal o realizar otras acciones necesarias
             onClose();

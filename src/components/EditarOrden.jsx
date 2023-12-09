@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import NavbarOrder from "../components/NavbarOrder";
 
-const endpoint = "http://localhost:8000/api/ordenes/";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/ordenes/";
 
 const EditarOrden = ({ isOpen, onClose }) => {
     const navigate = useNavigate();

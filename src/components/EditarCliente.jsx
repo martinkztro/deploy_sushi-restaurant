@@ -5,7 +5,7 @@ import NavbarClient from "../components/NavbarClient";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 
-const endpoint = "http://localhost:8000/api/clientes/";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/clientes/";
 
 const EditarCliente = ({}) => {
 

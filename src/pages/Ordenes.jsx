@@ -6,7 +6,7 @@ import axios from "axios";
 import deleteData from "../hooks/DeleteButton";
 import Swal from "sweetalert2";
 
-const endpoint = "http://localhost:8000/api/ordenes";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/ordenes";
 
 export default function Ordenes() {
 
@@ -23,7 +23,7 @@ export default function Ordenes() {
     }, []);
 
     const deleteOrden = (id) => {
-        deleteData("http://localhost:8000/api/ordenes", id);
+        deleteData("https://restaurante-api-production.up.railway.app/api/ordenes", id);
         setOrdenes(ordenes.filter((ordenes) => ordenes.id !== id));
         axios.delete(endpoint + "/" + id);
     }

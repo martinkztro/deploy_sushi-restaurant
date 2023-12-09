@@ -13,7 +13,7 @@ const CrearOrden = ({ isOpen, onClose }) => {
   const [cantidad, setCantidad] = useState(1);
   const [nuevoElemento, setNuevoElemento] = useState(""); // Agregado
 
-  const endpoint = "http://localhost:8000/api/platillos";
+  const endpoint = "https://restaurante-api-production.up.railway.app/api/platillos";
 
   useEffect(() => {
     axios
@@ -56,7 +56,7 @@ const CrearOrden = ({ isOpen, onClose }) => {
   
     try {
       // Realizar la solicitud POST para crear una nueva orden
-      const response = await axios.post("http://localhost:8000/api/ordenes", {
+      const response = await axios.post("https://restaurante-api-production.up.railway.app/api/ordenes", {
         tipo_orden: tipoOrden,
         mesa: numeroMesa,
         direccion: direccion,

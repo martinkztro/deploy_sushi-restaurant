@@ -3,7 +3,7 @@ import CardHome from '../components/CardHome'
 import Layout from '../layouts/Layout';
 import axios from 'axios';
 
-const endpoint = 'http://localhost:8000/api';
+const endpoint = 'https://restaurante-api-production.up.railway.app/api';
 
 export default function Inicio() {
 

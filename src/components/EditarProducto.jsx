@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../layouts/Layout';
 import NavbarInv from './NavbarInv';
 
-const endpoint = "http://localhost:8000/api/inventarios/";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/inventarios/";
 
 const EditarProducto = () => {
 

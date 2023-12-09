@@ -7,7 +7,7 @@ import deleteData from "../hooks/DeleteButton";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const endpoint = "http://localhost:8000/api/platillos";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/platillos";
 
 export default function Platillos() {
 
@@ -17,7 +17,7 @@ export default function Platillos() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/platillos")
+            .get("https://restaurante-api-production.up.railway.app/api/platillos")
             .then((response) => {
                 setPlatillo(response.data.data);
             })
@@ -31,7 +31,7 @@ export default function Platillos() {
     }, []);
 
     const deletePlatillo = (id) => {
-        deleteData("http://localhost:8000/api/platillos", id);
+        deleteData("https://restaurante-api-production.up.railway.app/api/platillos", id);
         setPlatillo(platillo.filter((platillo) => platillo.id !== id));
         axios.delete(endpoint + "/" + id);
     }

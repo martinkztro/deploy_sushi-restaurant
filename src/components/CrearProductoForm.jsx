@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const endpoint = "http://localhost:8000/api/inventarios";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/inventarios";
 
 const CrearProductoForm = ({ onSubmit, onClose }) => {
     // States

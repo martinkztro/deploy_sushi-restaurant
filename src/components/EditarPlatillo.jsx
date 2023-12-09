@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const endpoint = "http://localhost:8000/api/platillos/";
+const endpoint = "https://restaurante-api-production.up.railway.app/api/platillos/";
 
 const EditarPlatillo = ({}) => {
 
@@ -44,7 +44,7 @@ const EditarPlatillo = ({}) => {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/platillosInventarios")
+            .get("https://restaurante-api-production.up.railway.app/api/platillosInventarios")
             .then((response) => {
                 setListaDeIngredientes(response.data.data);
             })
@@ -54,7 +54,7 @@ const EditarPlatillo = ({}) => {
             
     
         axios
-            .get(`http://localhost:8000/api/platillos/${platilloId}`)
+            .get(`https://restaurante-api-production.up.railway.app/api/platillos/${platilloId}`)
             .then((response) => {
                 const { data } = response.data;
                 setName(data.nombre);
